@@ -1,2 +1,4 @@
 # Ignore practice file
 Practice.ipynb
+# Ignore ipynb checkpoints
+.ipynb_checkpoints/
