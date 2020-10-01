@@ -2,13 +2,32 @@
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
+import datetime as dt
 
-# Path to chromedriver
-get_ipython().system('which chromedriver')
+# scrape_all function 
+# - Initialize the browser
+# - Create a data dictionary
+# - End the Web driver and return the scraped data
+def scrape_all():
 
-# Set up an executable path
-executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
-browser = Browser('chrome', **executable_path, headless=False)
+    # Initiate headless driver for deployment
+    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+    browser = Browser('chrome', **executable_path, headless=True)
+
+    news_title, news_paragraph = mars_news(browser)
+
+    # Run all scraping functions and store results in dictionary
+    data = {
+        "news_title": news_title,
+        "news_paragraph": news_paragraph,
+        "featured_image": featured_image(browser),
+        "facts": mars_facts(),
+        "last_modified": dt.datetime.now()
+    }
+
+    # Stop webdriver and return data
+    browser.quit()
+    return data
 
 def mars_news(browser):
     
@@ -85,6 +104,8 @@ def mars_facts():
     df.set_index('Description', inplace=True)
 
     # Convert dataframe into HTML format, add bootstrap
-    return df.to_html()
+    return df.to_html(classes="table table-striped")
 
-browser.quit()
+if __name__ == "__main__":
+    # If running as script, print scraped data
+    print(scrape_all())
