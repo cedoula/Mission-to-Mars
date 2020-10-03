@@ -8,10 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center" 
+         style="background-image: url('https://media2.govtech.com/images/940*548/surface+of+mars.jpg'); 
+         background-size: cover; background-position: center; color: white">
             <h1>Mission to Mars</h1>
             <p><a class="btn btn-primary btn-lg" href="/scrape"
-                role="button">Scrape New Data
+                role="button" style="background-color: black; border: none; color: white;">Scrape New Data
             </a></p>
         </div>
         <!-- Mars News -->
@@ -37,10 +39,12 @@
             <!-- Optional: clear the XS cols if their content doesn't match in height -->
             <div class="clearfix visible-xs-block"></div>
             <!-- Mars Facts -->
-            <div class="col-xs-6 col-md-4">
+            <div class="col-md-4">
                 <div class="row" id="mars-facts">
                     <h4>Mars Facts</h4>
-                    {{mars.facts | safe}}
+                        <div class="table-responsive">
+                            <table class="table bordeless">{{mars.facts | safe}}</table>
+                        </div>
                 </div>
             </div>
         </div>
@@ -55,12 +59,14 @@
             </div>
             <!-- Hemisphere images -->
             {% for hemisphere in mars.hemisphere_image_info %}
-                <div class="col-xs-6 col-md-6">
+                <div class="col-xs-3 col-md-3">
                     <figure class="img-responsive">
-                        <p style="border: 1px solid lightgrey;border-radius: 5px;padding:2px;">
-                            <img src="{{hemisphere.img_url}}" class="img-responsive" alt="Responsive image">
-                            <figcaption align="left">{{hemisphere.title}}</figcaption>
-                        </p>
+                        <div class = "thumbnail">
+                            <a href = "{{hemisphere.img_url}}" target = "_blank">
+                               <img src = "{{hemisphere.img_url}}" class="img-responsive" alt = "Responsive image" style = "width:100%">
+                               <figcaption align="left">{{hemisphere.title}}</figcaption>
+                            </a>
+                         </div>
                     </figure>
                 </div>
             {% endfor %}
