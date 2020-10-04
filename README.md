@@ -9,6 +9,8 @@
 
 ## Results
 
-<img src="https://user-images.githubusercontent.com/68669675/95029070-2364ad80-066b-11eb-9f46-384daba73bc2.png" class="img-responsive" alt="Responsive image" style="align: center">
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68669675/95029070-2364ad80-066b-11eb-9f46-384daba73bc2.png" class="img-responsive" alt="Responsive image" style="align: center">
+</p>
 
 ## Summary
