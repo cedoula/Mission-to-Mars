@@ -13,6 +13,5 @@ Create a web application with Flask that will automatically scrape different web
     <img src="https://user-images.githubusercontent.com/68669675/95029070-2364ad80-066b-11eb-9f46-384daba73bc2.png" class="img-responsive" alt="Responsive image" width=700px height=auto>
 </p>
 <br>
-<p align="center">
+
 [![Mission to Mars - Demo](https://user-images.githubusercontent.com/68669675/95037786-c3353200-0691-11eb-9be5-c5e6ca263791.png)](https://vimeo.com/464860239 "Mission to Mars Demo - Click to Watch!")
-</p>
