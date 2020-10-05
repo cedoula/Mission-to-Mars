@@ -14,4 +14,4 @@ Create a web application with Flask that will automatically scrape different web
 </p>
 
 
-[![Mission to Mars - Demo](https://vimeo.com/464860239)](https://vimeo.com/464860239 "Mission to Mars Demo - Click to Watch!")
+[![Mission to Mars - Demo](https://user-images.githubusercontent.com/68669675/95037786-c3353200-0691-11eb-9be5-c5e6ca263791.png)](https://vimeo.com/464860239 "Mission to Mars Demo - Click to Watch!")
